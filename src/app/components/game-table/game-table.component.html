@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Match 3 Game</h1>
+      <h2 class="text-center">Score: {{ bombCount }} / {{ bombToClear }}</h2>
+      <h2 class="text-center">{{ message }}</h2>
+      <div class="text-center my-3">
+        <button class="btn btn-primary" (click)="restartGame()">New Game</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="gameTable" class="col-4 mx-auto my-5">
+      <div class="d-flex flex-column">
+        <div *ngFor="let row of board; let i = index" class="d-flex">
+          <div
+            *ngFor="let gem of row; let j = index"
+            [ngClass]="[gem.type]"
+            [style.background-color]="gem.color"
+            class="p-2"
+            (click)="selectGem(gem)"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

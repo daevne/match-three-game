@@ -1,0 +1,24 @@
+.gem {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0px 0px 3px 5px rgba(255, 255, 255, 0.1),
+              inset 0px 0px 3px 10px rgba(245, 250, 145, 0.1),
+              inset 0px 0px 3px 15px rgba(240, 255, 70, 0.1),
+              inset 0px 0px 3px 20px rgba(255, 250, 0, 0.1);
+  border: solid 0.3vh white;
+  cursor: pointer;
+}
+
+.bomb {
+  animation: disappear 3s ease-in-out, scaleUp 3s ease-in-out, rotate 3s linear;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
